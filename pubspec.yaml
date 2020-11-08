@@ -51,6 +51,9 @@ flutter:
     - images/icon_three.png
     - images/icon_four.png
     - images/tapme.png
+    - images/banner.png
+    - images/banner_two.png
+    - images/banner_three.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
