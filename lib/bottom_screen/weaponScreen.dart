@@ -8,8 +8,18 @@ class WeaponScreen extends StatefulWidget {
 class _WeaponScreenState extends State<WeaponScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(70.0),
+        child: AppBar(
+          backgroundColor: Colors.black54,
+          actions: [
+            IconButton(icon: Icon(Icons.search,color: Colors.white,), onPressed: null),
+            
+          ],
+        ),
+      ),
+      drawer: Drawer(),
     );
   }
 }
