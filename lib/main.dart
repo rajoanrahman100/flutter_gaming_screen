@@ -1,8 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:fluttergamingscreen/bottom_screen/inventory.dart';
 import 'package:fluttergamingscreen/bottom_screen/utils.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
-
+import 'package:splashscreen/splashscreen.dart';
 import 'bottom_screen/armorScreen.dart';
 import 'bottom_screen/weaponScreen.dart';
 
@@ -16,10 +18,47 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MainPageBottomBar(),
+      home: SplashScreenPage(),
     );
   }
 }
+
+class SplashScreenPage extends StatefulWidget {
+
+
+
+  @override
+  _SplashScreenPageState createState() => _SplashScreenPageState();
+}
+
+class _SplashScreenPageState extends State<SplashScreenPage> {
+
+  void initState() {
+    super.initState();
+    Timer(Duration(seconds: 3),
+            ()=>Navigator.pushReplacement(context,
+            MaterialPageRoute(builder:
+                (context) => MainPageBottomBar()
+            )
+        )
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+
+      child: Container(
+        height: MediaQuery.of(context).size.height,
+        child: FittedBox(
+          fit: BoxFit.fill,
+          child: Image.asset("images/destwo.jpg"),
+        ),
+      ),
+    );
+  }
+}
+
 
 class MainPageBottomBar extends StatefulWidget {
   @override
@@ -38,6 +77,9 @@ class _MainPageBottomBarState extends State<MainPageBottomBar> {
   }
 
   var textStyle;
+
+
+
 
   @override
   Widget build(BuildContext context) {
