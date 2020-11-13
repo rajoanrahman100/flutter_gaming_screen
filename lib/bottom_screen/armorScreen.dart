@@ -33,6 +33,7 @@ class _ArmorScreenState extends State<ArmorScreen> {
                     Expanded(
                       flex: 2,
                       child: Container(
+                        padding: EdgeInsets.only(left: 5.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -148,7 +149,7 @@ class _ArmorScreenState extends State<ArmorScreen> {
                               ],
                             ),
                             SizedBox(
-                              height: 30.0,
+                              height: 25.0,
                             ),
                             textWidget(
                                 "HELMET", Colors.white, 17.0, FontWeight.bold)
@@ -182,105 +183,107 @@ class _ArmorScreenState extends State<ArmorScreen> {
                     ),
                     Expanded(
                       flex: 2,
-                      child: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                textWidget("Season Rank 1", colorsWhite, 10.0,
-                                    FontWeight.w300),
-                                SizedBox(
-                                  width: 15.0,
-                                ),
-                                textWidget("0/1000000", colorsWhite, 10.0,
-                                    FontWeight.w300),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 8.0,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                iconWidget(Icons.favorite, 10.0, Colors.amber),
-                                textWidget(
-                                    "750", Colors.amber, 35.0, FontWeight.w500)
-                              ],
-                            ),
-                            textWidget(
-                                "750", colorsWhite, 15.0, FontWeight.w500),
-                            SizedBox(
-                              height: 5.0,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Icon(
-                                        Icons.favorite,
-                                        color: Colors.white,
-                                        size: 15.0,
-                                      ),
-                                      textWidget("100000", Colors.white, 12.0,
-                                          FontWeight.w500),
-                                    ],
+                      child: FittedBox(
+                        child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  textWidget("Season Rank 1", colorsWhite, 10.0,
+                                      FontWeight.w300),
+                                  SizedBox(
+                                    width: 15.0,
                                   ),
-                                ),
-                                SizedBox(
-                                  width: 8.0,
-                                ),
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Icon(
-                                        Icons.favorite,
-                                        color: Colors.white,
-                                        size: 15.0,
-                                      ),
-                                      textWidget("50", Colors.white, 12.0,
-                                          FontWeight.w500),
-                                    ],
+                                  textWidget("0/1000000", colorsWhite, 10.0,
+                                      FontWeight.w300),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 8.0,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  iconWidget(Icons.favorite, 10.0, Colors.amber),
+                                  textWidget(
+                                      "750", Colors.amber, 35.0, FontWeight.w500)
+                                ],
+                              ),
+                              textWidget(
+                                  "750", colorsWhite, 15.0, FontWeight.w500),
+                              SizedBox(
+                                height: 5.0,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Container(
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                          Icons.favorite,
+                                          color: Colors.white,
+                                          size: 15.0,
+                                        ),
+                                        textWidget("100000", Colors.white, 12.0,
+                                            FontWeight.w500),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: 8.0,
-                                ),
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Icon(
-                                        Icons.favorite,
-                                        color: Colors.white,
-                                        size: 15.0,
-                                      ),
-                                      textWidget("100", Colors.white, 12.0,
-                                          FontWeight.w500),
-                                    ],
+                                  SizedBox(
+                                    width: 8.0,
                                   ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 15.0,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                iconWidget(Icons.calendar_today_sharp, 17.0,
-                                    colorsWhite),
-                                SizedBox(
-                                  width: 5.0,
-                                ),
-                                textWidget(
-                                    "2/10", colorsWhite, 15.0, FontWeight.w500)
-                              ],
-                            ),
-                          ],
+                                  Container(
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                          Icons.favorite,
+                                          color: Colors.white,
+                                          size: 15.0,
+                                        ),
+                                        textWidget("50", Colors.white, 12.0,
+                                            FontWeight.w500),
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 8.0,
+                                  ),
+                                  Container(
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                          Icons.favorite,
+                                          color: Colors.white,
+                                          size: 15.0,
+                                        ),
+                                        textWidget("100", Colors.white, 12.0,
+                                            FontWeight.w500),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 15.0,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  iconWidget(Icons.calendar_today_sharp, 17.0,
+                                      colorsWhite),
+                                  SizedBox(
+                                    width: 5.0,
+                                  ),
+                                  textWidget(
+                                      "2/10", colorsWhite, 15.0, FontWeight.w500)
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -295,8 +298,13 @@ class _ArmorScreenState extends State<ArmorScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        height: 20.0,
-                        color: Colors.amber,
+                        height: 25.0,
+                        width: double.infinity,
+                        color: Colors.amber[400],
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 100.0,top: 5.0),
+                            child: textWidget("KHEPRI'S HORN",colorsWhite,13.0,FontWeight.w500),
+                          )
                       ),
                       Expanded(
                         child: Container(

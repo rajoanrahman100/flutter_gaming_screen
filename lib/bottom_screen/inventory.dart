@@ -147,7 +147,7 @@ class _InventoryState extends State<Inventory> {
                               ],
                             ),
                             SizedBox(
-                              height: 35.0,
+                              height: 25.0,
                             ),
                             textWidget(
                                 "ENGRAMS", Colors.white, 17.0, FontWeight.bold)
@@ -181,105 +181,107 @@ class _InventoryState extends State<Inventory> {
                     ),
                     Expanded(
                       flex: 2,
-                      child: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                textWidget("Season Rank 1", colorsWhite, 10.0,
-                                    FontWeight.w300),
-                                SizedBox(
-                                  width: 15.0,
-                                ),
-                                textWidget("0/1000000", colorsWhite, 10.0,
-                                    FontWeight.w300),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 8.0,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                iconWidget(Icons.favorite, 10.0, Colors.amber),
-                                textWidget(
-                                    "750", Colors.amber, 35.0, FontWeight.w500)
-                              ],
-                            ),
-                            textWidget(
-                                "750", colorsWhite, 15.0, FontWeight.w500),
-                            SizedBox(
-                              height: 5.0,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Icon(
-                                        Icons.favorite,
-                                        color: Colors.white,
-                                        size: 15.0,
-                                      ),
-                                      textWidget("100000", Colors.white, 12.0,
-                                          FontWeight.w500),
-                                    ],
+                      child: FittedBox(
+                        child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  textWidget("Season Rank 1", colorsWhite, 10.0,
+                                      FontWeight.w300),
+                                  SizedBox(
+                                    width: 15.0,
                                   ),
-                                ),
-                                SizedBox(
-                                  width: 8.0,
-                                ),
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Icon(
-                                        Icons.favorite,
-                                        color: Colors.white,
-                                        size: 15.0,
-                                      ),
-                                      textWidget("50", Colors.white, 12.0,
-                                          FontWeight.w500),
-                                    ],
+                                  textWidget("0/1000000", colorsWhite, 10.0,
+                                      FontWeight.w300),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 8.0,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  iconWidget(Icons.favorite, 10.0, Colors.amber),
+                                  textWidget(
+                                      "750", Colors.amber, 35.0, FontWeight.w500)
+                                ],
+                              ),
+                              textWidget(
+                                  "750", colorsWhite, 15.0, FontWeight.w500),
+                              SizedBox(
+                                height: 5.0,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Container(
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                          Icons.favorite,
+                                          color: Colors.white,
+                                          size: 15.0,
+                                        ),
+                                        textWidget("100000", Colors.white, 12.0,
+                                            FontWeight.w500),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                                SizedBox(
-                                  width: 8.0,
-                                ),
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Icon(
-                                        Icons.favorite,
-                                        color: Colors.white,
-                                        size: 15.0,
-                                      ),
-                                      textWidget("100", Colors.white, 12.0,
-                                          FontWeight.w500),
-                                    ],
+                                  SizedBox(
+                                    width: 8.0,
                                   ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 25.0,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                iconWidget(Icons.calendar_today_sharp, 17.0,
-                                    colorsWhite),
-                                SizedBox(
-                                  width: 5.0,
-                                ),
-                                textWidget(
-                                    "2/10", colorsWhite, 15.0, FontWeight.w500)
-                              ],
-                            ),
-                          ],
+                                  Container(
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                          Icons.favorite,
+                                          color: Colors.white,
+                                          size: 15.0,
+                                        ),
+                                        textWidget("50", Colors.white, 12.0,
+                                            FontWeight.w500),
+                                      ],
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 8.0,
+                                  ),
+                                  Container(
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                          Icons.favorite,
+                                          color: Colors.white,
+                                          size: 15.0,
+                                        ),
+                                        textWidget("100", Colors.white, 12.0,
+                                            FontWeight.w500),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 20.0,
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  iconWidget(Icons.calendar_today_sharp, 17.0,
+                                      colorsWhite),
+                                  SizedBox(
+                                    width: 5.0,
+                                  ),
+                                  textWidget(
+                                      "2/10", colorsWhite, 15.0, FontWeight.w500)
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
