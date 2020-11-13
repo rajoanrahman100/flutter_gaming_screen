@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttergamingscreen/bottom_screen/utils.dart';
 
 class WeaponScreen extends StatefulWidget {
   @override
@@ -17,22 +18,6 @@ class _WeaponScreenState extends State<WeaponScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:Colors.deepPurple,
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60.0),
-        child: AppBar(
-          backgroundColor: Colors.black,
-          actions: [
-            IconButton(icon: Icon(Icons.search,color: Colors.white,size: 30,), onPressed: null),
-            Icon(Icons.check_box_outline_blank,size: 40.0,color: Colors.red,),
-            Icon(Icons.check_box_outline_blank,size: 40.0,color: Colors.green,),
-            Icon(Icons.check_box_outline_blank,size: 40.0,color: Colors.yellow,),
-            Icon(Icons.check_box_outline_blank,size: 40.0,color: Colors.blue,),
-
-
-          ],
-
-        ),
-      ),
       body: SingleChildScrollView(
 
         child: Column(
@@ -40,155 +25,265 @@ class _WeaponScreenState extends State<WeaponScreen> {
             AspectRatio(
               aspectRatio: 2.5,
               child: Container(
-                decoration: BoxDecoration(
-
-                  border: Border(
-
-                    bottom: BorderSide(width: 1.0, color: Colors.lightBlue.shade900),
-                  ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
+                padding: EdgeInsets.all(5.0),
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Container(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-
-                            Text("TITAN",style: TextStyle(
-                              color: Colors.white,fontSize: 20.0,fontWeight: FontWeight.bold
-                            ),),
-                            Text("Human Female",style: TextStyle(
-                                color: Colors.grey[300],fontSize: 17.0,fontWeight: FontWeight.w300
-                            ),),
-                            Container(
-                              width: 120.0,
-                              margin: EdgeInsets.only(left: 5.0),
-                              height: 30.0,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                children: [
-                                 //SizedBox(width: 50.0,),
-                                  Text("50",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),),
-                                  Text("50",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),),
-                                  Text("30",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),)
-                                ],
-                              ),
+                            SizedBox(
+                              height: 10.0,
                             ),
-                            Container(
-                              width: 120.0,
-                              margin: EdgeInsets.only(left: 5.0),
-                              height: 30.0,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                children: [
-                                  // SizedBox(width: 50.0,),
-                                  Text("20",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),),
-                                  Text("20",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),),
-                                  Text("30",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500),)
-                                ],
-                              ),
+                            textWidget(
+                                "TITAN", Colors.white, 17.0, FontWeight.bold),
+                            textWidget("Human Female", Colors.white, 13.0,
+                                FontWeight.w300),
+                            SizedBox(
+                              height: 5.0,
                             ),
-                            SizedBox(height: 20.0,),
-
-                            Text("SUBCLASS",style: TextStyle(
-                                color: Colors.white,fontSize: 20.0,fontWeight: FontWeight.bold
-                            ),),
+                            Row(
+                              children: [
+                                Container(
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.favorite,
+                                        color: Colors.white,
+                                        size: 15.0,
+                                      ),
+                                      textWidget("50", Colors.white, 12.0,
+                                          FontWeight.w500),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 3.0,
+                                ),
+                                Container(
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.favorite,
+                                        color: Colors.white,
+                                        size: 15.0,
+                                      ),
+                                      textWidget("50", Colors.white, 12.0,
+                                          FontWeight.w500),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 3.0,
+                                ),
+                                Container(
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.favorite,
+                                        color: Colors.white,
+                                        size: 15.0,
+                                      ),
+                                      textWidget("30", Colors.white, 12.0,
+                                          FontWeight.w500),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 5.0,
+                            ),
+                            Row(
+                              children: [
+                                Container(
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.favorite,
+                                        color: Colors.white,
+                                        size: 15.0,
+                                      ),
+                                      textWidget("20", Colors.white, 12.0,
+                                          FontWeight.w500),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 3.0,
+                                ),
+                                Container(
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.favorite,
+                                        color: Colors.white,
+                                        size: 15.0,
+                                      ),
+                                      textWidget("20", Colors.white, 12.0,
+                                          FontWeight.w500),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 3.0,
+                                ),
+                                Container(
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.favorite,
+                                        color: Colors.white,
+                                        size: 15.0,
+                                      ),
+                                      textWidget("30", Colors.white, 12.0,
+                                          FontWeight.w500),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 30.0,
+                            ),
+                            textWidget(
+                                "SUBCLASS", Colors.white, 17.0, FontWeight.bold)
                           ],
                         ),
                       ),
-
-                      Container(
-                        width: 80.0,
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        padding: EdgeInsets.only(right: 10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            iconWidget(Icons.add_box, 35.0, colorsWhite),
+                            iconWidget(
+                                Icons.arrow_upward, 14.0, Colors.lightBlue),
+                            Container(
+                              height: 30.0,
+                              width: 100.0,
+                              decoration: BoxDecoration(
+                                  color: Colors.lightBlue,
+                                  borderRadius: BorderRadius.circular(8.0)),
+                              child: Center(
+                                  child: textWidget("Hey, tap me", Colors.white,
+                                      10.0, FontWeight.w500)),
+                            )
+                          ],
+                        ),
                       ),
-
-                      Container(
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Text("Season Rank       ",style: TextStyle(color: Colors.grey[300],fontWeight: FontWeight.w500),),
-                                Text("1/1000000",style: TextStyle(color: Colors.grey[300],fontWeight: FontWeight.w500),),
+                                textWidget("Season Rank 1", colorsWhite, 10.0,
+                                    FontWeight.w300),
+                                SizedBox(
+                                  width: 15.0,
+                                ),
+                                textWidget("0/1000000", colorsWhite, 10.0,
+                                    FontWeight.w300),
                               ],
                             ),
+                            SizedBox(
+                              height: 8.0,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                iconWidget(Icons.favorite, 10.0, Colors.amber),
+                                textWidget(
+                                    "750", Colors.amber, 35.0, FontWeight.w500)
+                              ],
+                            ),
+                            textWidget(
+                                "750", colorsWhite, 15.0, FontWeight.w500),
                             SizedBox(
                               height: 5.0,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Icon(Icons.star,color: Colors.amber[600],),
-                                Text("750",style: TextStyle(color: Colors.amber[600],fontSize:35.0,fontWeight: FontWeight.w500))
+                                Container(
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.favorite,
+                                        color: Colors.white,
+                                        size: 15.0,
+                                      ),
+                                      textWidget("100000", Colors.white, 12.0,
+                                          FontWeight.w500),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 8.0,
+                                ),
+                                Container(
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.favorite,
+                                        color: Colors.white,
+                                        size: 15.0,
+                                      ),
+                                      textWidget("50", Colors.white, 12.0,
+                                          FontWeight.w500),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 8.0,
+                                ),
+                                Container(
+                                  child: Row(
+                                    children: [
+                                      Icon(
+                                        Icons.favorite,
+                                        color: Colors.white,
+                                        size: 15.0,
+                                      ),
+                                      textWidget("100", Colors.white, 12.0,
+                                          FontWeight.w500),
+                                    ],
+                                  ),
+                                ),
                               ],
                             ),
                             SizedBox(
-                              height: 5.0,
-                            ),
-                            Text("750",style: TextStyle(color: Colors.white,fontSize:18.0,fontWeight: FontWeight.w500)),
-
-                            SizedBox(
-                              height: 5.0,
+                              height: 15.0,
                             ),
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.check_box_outline_blank,color: Colors.white,),
-                                      Text("100000",style: TextStyle(color: Colors.white),)
-                                    ],
-                                  ),
-                                ),
-
+                                iconWidget(Icons.calendar_today_sharp, 17.0,
+                                    colorsWhite),
                                 SizedBox(
-                                  width: 7.0,
+                                  width: 5.0,
                                 ),
-
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.check_box_outline_blank,color: Colors.white,),
-                                      Text("50",style: TextStyle(color: Colors.white),)
-                                    ],
-                                  ),
-                                ),
-
-                                SizedBox(
-                                  width: 7.0,
-                                ),
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.check_box_outline_blank,color: Colors.white,),
-                                      Text("100",style: TextStyle(color: Colors.white),)
-                                    ],
-                                  ),
-                                ),
+                                textWidget(
+                                    "3/3", colorsWhite, 15.0, FontWeight.w500)
                               ],
                             ),
-                            SizedBox(
-                              height: 10.0,
-                            ),
-
-                            Row(
-                              children: [
-                                Icon(Icons.check_box_outline_blank,color: Colors.white,),
-                                Text("3/3",style: TextStyle(color: Colors.white),)
-                              ],
-                            )
-
                           ],
                         ),
                       ),
-
-
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-
               ),
             ),
             Image.asset("images/banner.png"),
@@ -557,7 +652,7 @@ class _WeaponScreenState extends State<WeaponScreen> {
           ],
         ),
       ),
-      drawer: Drawer(),
+
     );
   }
 }
