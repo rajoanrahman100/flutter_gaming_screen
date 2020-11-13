@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'bottom_screen/armorScreen.dart';
+import 'bottom_screen/mediaQueryClass.dart';
 import 'bottom_screen/weaponScreen.dart';
 
 void main() {
