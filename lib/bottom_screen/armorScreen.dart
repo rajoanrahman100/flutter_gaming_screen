@@ -266,7 +266,7 @@ class _ArmorScreenState extends State<ArmorScreen> {
                               ],
                             ),
                             SizedBox(
-                              height: 5.0,
+                              height: 15.0,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
@@ -360,7 +360,7 @@ class _ArmorScreenState extends State<ArmorScreen> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
-                                    textWidget("750", colorsWhite, 30.0,
+                                    textWidget("750", colorsWhite, 25.0,
                                         FontWeight.w500),
                                     SizedBox(
                                       height: 10,
@@ -388,15 +388,722 @@ class _ArmorScreenState extends State<ArmorScreen> {
                 child: GridView.count(
                   childAspectRatio: 2.3,
                   crossAxisCount: 3,
+                  physics: NeverScrollableScrollPhysics(),
                   crossAxisSpacing: 1.0,
                   mainAxisSpacing: 1.0,
-                  children: List.generate(9,(index){
+                  children: List.generate(9, (index) {
                     return SelectCard();
                   }),
-
                 ),
               ),
-            )
+            ),
+
+            SizedBox(height: 20.0),
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  textWidget("GUNTLETS", colorsWhite, 17, FontWeight.w500),
+                  Row(
+                    children: [
+                      iconWidget(Icons.calendar_today_sharp, 17.0,
+                          colorsWhite),
+                      SizedBox(
+                        width: 5.0,
+                      ),
+                      textWidget(
+                          "3/10", colorsWhite, 15.0, FontWeight.w500)
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            AspectRatio(
+              aspectRatio: 3.5,
+              child: Container(
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                       Container(
+                          height: 25.0,
+                          width: double.infinity,
+                          color: Colors.deepPurple,
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 100.0,top: 5.0),
+                            child: textWidget("Kairos Function Guntletes",colorsWhite,13.0,FontWeight.w500),
+                          ),
+                        ),
+
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 5.0),
+                          color: Colors.black54,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      height: 90.0,
+                                      width: 90.0,
+                                      decoration: BoxDecoration(
+                                          color: Colors.amber,
+                                          border:
+                                              Border.all(color: Colors.white)),
+                                      child: Center(
+                                          child: iconWidget(Icons.favorite,
+                                              80.0, Colors.blueAccent)),
+                                    ),
+                                    SizedBox(
+                                      width: 10.0,
+                                    ),
+                                    Container(
+                                      height: 85,
+                                      width: 100.0,
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          textWidget("Helmet", colorsWhite,
+                                              14.0, FontWeight.w300),
+                                          SizedBox(
+                                            height: 40.0,
+                                          ),
+                                          Container(
+                                            child: Row(
+                                              children: [
+                                                iconWidget(Icons.house, 18.0,
+                                                    colorsWhite),
+                                                iconWidget(Icons.car_rental,
+                                                    18.0, colorsWhite),
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                height: 90.0,
+                                width: 80.0,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        textWidget("750", colorsWhite, 25.0,
+                                            FontWeight.w500),
+                                        textWidget("1060", Colors.amber, 15.0,
+                                            FontWeight.w500),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        Container(
+                                          height: 30.0,
+                                          width: 30.0,
+                                          decoration: BoxDecoration(
+                                              border: Border.all(
+                                                  color: colorsWhite)),
+                                        ),
+                                        Container(
+                                          height: 30.0,
+                                          width: 30.0,
+                                          decoration: BoxDecoration(
+                                              border: Border.all(
+                                                  color: colorsWhite)),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                    ]),
+              ),
+            ),
+            AspectRatio(
+              aspectRatio: 2,
+              child: Container(
+                child: GridView.count(
+                  childAspectRatio: 2.3,
+                  crossAxisCount: 3,
+                  physics: NeverScrollableScrollPhysics(),
+                  crossAxisSpacing: 1.0,
+                  mainAxisSpacing: 1.0,
+                  children: List.generate(9, (index) {
+                    return SelectCard();
+                  }),
+                ),
+              ),
+            ),
+
+
+            SizedBox(height: 20.0),
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  textWidget("CHEST ARMOR", colorsWhite, 17, FontWeight.w500),
+                  Row(
+                    children: [
+                      iconWidget(Icons.calendar_today_sharp, 17.0,
+                          colorsWhite),
+                      SizedBox(
+                        width: 5.0,
+                      ),
+                      textWidget(
+                          "2/10", colorsWhite, 15.0, FontWeight.w500)
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            AspectRatio(
+              aspectRatio: 3.5,
+              child: Container(
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 25.0,
+                        width: double.infinity,
+                        color: Colors.deepPurple,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 100.0,top: 5.0),
+                          child: textWidget("DEVASTATION COMPLEX",colorsWhite,13.0,FontWeight.w500),
+                        ),
+                      ),
+
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 5.0),
+                          color: Colors.black54,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      height: 90.0,
+                                      width: 90.0,
+                                      decoration: BoxDecoration(
+                                          color: Colors.amber,
+                                          border:
+                                          Border.all(color: Colors.white)),
+                                      child: Center(
+                                          child: iconWidget(Icons.favorite,
+                                              80.0, Colors.blueAccent)),
+                                    ),
+                                    SizedBox(
+                                      width: 10.0,
+                                    ),
+                                    Container(
+                                      height: 85,
+                                      width: 100.0,
+                                      child: Column(
+                                        crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                        children: [
+                                          textWidget("Chest Armor", colorsWhite,
+                                              14.0, FontWeight.w300),
+                                          SizedBox(
+                                            height: 40.0,
+                                          ),
+                                          Container(
+                                            child: Row(
+                                              children: [
+                                                iconWidget(Icons.house, 18.0,
+                                                    colorsWhite),
+                                                iconWidget(Icons.car_rental,
+                                                    18.0, colorsWhite),
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                height: 90.0,
+                                width: 80.0,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        textWidget("750", colorsWhite, 25.0,
+                                            FontWeight.w500),
+                                        textWidget("1060", Colors.amber, 15.0,
+                                            FontWeight.w500),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        Container(
+                                          height: 30.0,
+                                          width: 30.0,
+                                          decoration: BoxDecoration(
+                                              border: Border.all(
+                                                  color: colorsWhite)),
+                                        ),
+                                        Container(
+                                          height: 30.0,
+                                          width: 30.0,
+                                          decoration: BoxDecoration(
+                                              border: Border.all(
+                                                  color: colorsWhite)),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                    ]),
+              ),
+            ),
+            AspectRatio(
+              aspectRatio: 2,
+              child: Container(
+                child: GridView.count(
+                  childAspectRatio: 2.3,
+                  crossAxisCount: 3,
+                  physics: NeverScrollableScrollPhysics(),
+                  crossAxisSpacing: 1.0,
+                  mainAxisSpacing: 1.0,
+                  children: List.generate(9, (index) {
+                    return SelectCard();
+                  }),
+                ),
+              ),
+            ),
+
+
+
+            SizedBox(height: 20.0),
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  textWidget("LEG ARMOR", colorsWhite, 17, FontWeight.w500),
+                  Row(
+                    children: [
+                      iconWidget(Icons.calendar_today_sharp, 17.0,
+                          colorsWhite),
+                      SizedBox(
+                        width: 5.0,
+                      ),
+                      textWidget(
+                          "1/10", colorsWhite, 15.0, FontWeight.w500)
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            AspectRatio(
+              aspectRatio: 3.5,
+              child: Container(
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 25.0,
+                        width: double.infinity,
+                        color: Colors.deepPurple,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 100.0,top: 5.0),
+                          child: textWidget("RETRO-GRADE TG2",colorsWhite,13.0,FontWeight.w500),
+                        ),
+                      ),
+
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 5.0),
+                          color: Colors.black54,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      height: 90.0,
+                                      width: 90.0,
+                                      decoration: BoxDecoration(
+                                          color: Colors.amber,
+                                          border:
+                                          Border.all(color: Colors.white)),
+                                      child: Center(
+                                          child: iconWidget(Icons.favorite,
+                                              80.0, Colors.blueAccent)),
+                                    ),
+                                    SizedBox(
+                                      width: 10.0,
+                                    ),
+                                    Container(
+                                      height: 85,
+                                      width: 100.0,
+                                      child: Column(
+                                        crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                        children: [
+                                          textWidget("Leg Armor", colorsWhite,
+                                              14.0, FontWeight.w300),
+                                          SizedBox(
+                                            height: 40.0,
+                                          ),
+                                          Container(
+                                            child: Row(
+                                              children: [
+                                                iconWidget(Icons.house, 18.0,
+                                                    colorsWhite),
+                                                iconWidget(Icons.car_rental,
+                                                    18.0, colorsWhite),
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                height: 90.0,
+                                width: 80.0,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        textWidget("750", colorsWhite, 25.0,
+                                            FontWeight.w500),
+                                        textWidget("1060", Colors.amber, 15.0,
+                                            FontWeight.w500),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        Container(
+                                          height: 30.0,
+                                          width: 30.0,
+                                          decoration: BoxDecoration(
+                                              border: Border.all(
+                                                  color: colorsWhite)),
+                                        ),
+                                        Container(
+                                          height: 30.0,
+                                          width: 30.0,
+                                          decoration: BoxDecoration(
+                                              border: Border.all(
+                                                  color: colorsWhite)),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                    ]),
+              ),
+            ),
+            AspectRatio(
+              aspectRatio: 2,
+              child: Container(
+                child: GridView.count(
+                  childAspectRatio: 2.3,
+                  crossAxisCount: 3,
+                  physics: NeverScrollableScrollPhysics(),
+                  crossAxisSpacing: 1.0,
+                  mainAxisSpacing: 1.0,
+                  children: List.generate(9, (index) {
+                    return SelectCard();
+                  }),
+                ),
+              ),
+            ),
+
+
+
+            SizedBox(height: 20.0),
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  textWidget("CLASS ARMOR", colorsWhite, 17, FontWeight.w500),
+                  Row(
+                    children: [
+                      iconWidget(Icons.calendar_today_sharp, 17.0,
+                          colorsWhite),
+                      SizedBox(
+                        width: 5.0,
+                      ),
+                      textWidget(
+                          "1/10", colorsWhite, 15.0, FontWeight.w500)
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            AspectRatio(
+              aspectRatio: 3.5,
+              child: Container(
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 25.0,
+                        width: double.infinity,
+                        color: Colors.deepPurple,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 100.0,top: 5.0),
+                          child: textWidget("MARK OF SHELTER",colorsWhite,13.0,FontWeight.w500),
+                        ),
+                      ),
+
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 5.0),
+                          color: Colors.black54,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      height: 90.0,
+                                      width: 90.0,
+                                      decoration: BoxDecoration(
+                                          color: Colors.amber,
+                                          border:
+                                          Border.all(color: Colors.white)),
+                                      child: Center(
+                                          child: iconWidget(Icons.favorite,
+                                              80.0, Colors.blueAccent)),
+                                    ),
+                                    SizedBox(
+                                      width: 10.0,
+                                    ),
+                                    Container(
+                                      height: 85,
+                                      width: 100.0,
+                                      child: Column(
+                                        crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                        children: [
+                                          textWidget("Titan Mark", colorsWhite,
+                                              14.0, FontWeight.w300),
+                                          SizedBox(
+                                            height: 20.0,
+                                          ),
+                                          Container(
+                                            child: Column(
+                                              children: [
+                                                Row(
+                                                  children: [
+                                                    Container(
+                                                      child: Row(
+                                                        children: [
+                                                          Icon(
+                                                            Icons.favorite,
+                                                            color: Colors.white,
+                                                            size: 15.0,
+                                                          ),
+                                                          textWidget("00", Colors.white, 12.0,
+                                                              FontWeight.w500),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      width: 3.0,
+                                                    ),
+                                                    Container(
+                                                      child: Row(
+                                                        children: [
+                                                          Icon(
+                                                            Icons.favorite,
+                                                            color: Colors.white,
+                                                            size: 15.0,
+                                                          ),
+                                                          textWidget("00", Colors.white, 12.0,
+                                                              FontWeight.w500),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      width: 3.0,
+                                                    ),
+                                                    Container(
+                                                      child: Row(
+                                                        children: [
+                                                          Icon(
+                                                            Icons.favorite,
+                                                            color: Colors.white,
+                                                            size: 15.0,
+                                                          ),
+                                                          textWidget("00", Colors.white, 12.0,
+                                                              FontWeight.w500),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(
+                                                  height: 5.0,
+                                                ),
+                                                Row(
+                                                  children: [
+                                                    Container(
+                                                      child: Row(
+                                                        children: [
+                                                          Icon(
+                                                            Icons.favorite,
+                                                            color: Colors.white,
+                                                            size: 15.0,
+                                                          ),
+                                                          textWidget("00", Colors.white, 12.0,
+                                                              FontWeight.w500),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      width: 3.0,
+                                                    ),
+                                                    Container(
+                                                      child: Row(
+                                                        children: [
+                                                          Icon(
+                                                            Icons.favorite,
+                                                            color: Colors.white,
+                                                            size: 15.0,
+                                                          ),
+                                                          textWidget("00", Colors.white, 12.0,
+                                                              FontWeight.w500),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      width: 3.0,
+                                                    ),
+                                                    Container(
+                                                      child: Row(
+                                                        children: [
+                                                          Icon(
+                                                            Icons.favorite,
+                                                            color: Colors.white,
+                                                            size: 15.0,
+                                                          ),
+                                                          textWidget("00", Colors.white, 12.0,
+                                                              FontWeight.w500),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                height: 90.0,
+                                width: 80.0,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        textWidget("750", colorsWhite, 25.0,
+                                            FontWeight.w500),
+                                        textWidget("1060", Colors.amber, 15.0,
+                                            FontWeight.w500),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        Container(
+                                          height: 30.0,
+                                          width: 30.0,
+                                          decoration: BoxDecoration(
+                                              border: Border.all(
+                                                  color: colorsWhite)),
+                                        ),
+                                        Container(
+                                          height: 30.0,
+                                          width: 30.0,
+                                          decoration: BoxDecoration(
+                                              border: Border.all(
+                                                  color: colorsWhite)),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                    ]),
+              ),
+            ),
+            AspectRatio(
+              aspectRatio: 2,
+              child: Container(
+                child: GridView.count(
+                  childAspectRatio: 2.3,
+                  crossAxisCount: 3,
+                  physics: NeverScrollableScrollPhysics(),
+                  crossAxisSpacing: 1.0,
+                  mainAxisSpacing: 1.0,
+                  children: List.generate(9, (index) {
+                    return SelectCard();
+                  }),
+                ),
+              ),
+            ),
+
           ],
         ),
       ),
